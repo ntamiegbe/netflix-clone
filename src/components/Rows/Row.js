@@ -34,4 +34,3 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
 }
 
 export default Row
-export default Row
