@@ -7,6 +7,7 @@ import { auth } from './server/firebase';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout, selectUser } from './features/userSlice';
+import Profile from './pages/Profile/Profile';
 
 function App() {
 
@@ -21,7 +22,6 @@ function App() {
           uid: user.uid,
           email: user.email
         }))
-        console.log(user);
       } else {
         dispatch(logout)
       }
@@ -40,6 +40,7 @@ function App() {
         ) : (
           <Routes>
             <Route exact path='/' element={<Hero />} />
+            <Route exact path='/profile' element={<Profile />} />
           </Routes>
         )}
       </Router>

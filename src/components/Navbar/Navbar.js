@@ -1,9 +1,11 @@
 import './navbar.css'
 import Logo from '../../assets/logo.png'
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
     const [show, setShow] = useState(false)
+    const navigate = useNavigate()
 
     const transitionNavbar = () => {
         if (window.scrollY > 100) {
@@ -22,8 +24,8 @@ const Navbar = () => {
     return (
         <nav className={`navbar ${show && "navbar__black"}`}>
             <div className="navbar__contents">
-                <img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" alt="" className='navbar__logo' />
-                <img src={Logo} alt="" className='navbar__avatar' />
+                <img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" alt="" className='navbar__logo' onClick={() => navigate("/")} />
+                <img src={Logo} alt="" className='navbar__avatar' onClick={() => navigate("/profile")}/>
             </div>
         </nav>
     )
