@@ -4,6 +4,7 @@ import Logo from '../../assets/logo.png'
 import { useSelector } from 'react-redux'
 import { selectUser } from '../../features/userSlice'
 import { auth } from '../../server/firebase'
+import { signOut } from 'firebase/auth'
 
 const Profile = () => {
     const user = useSelector(selectUser)
@@ -19,7 +20,7 @@ const Profile = () => {
                         <h1>{user.email}</h1>
                         <div className="profile__plans">
 
-                            <button className='profile__button'>Logout</button>
+                            <button onClick={() => signOut(auth)} className='profile__button'>Logout</button>
                         </div>
                     </div>
                 </div>

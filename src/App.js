@@ -13,23 +13,22 @@ function App() {
 
   const user = useSelector(selectUser)
   const dispatch = useDispatch()
-  // const uid = user.uid;
 
   useEffect(() => {
-    const unsucscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
+    const unsucscribe = onAuthStateChanged(auth, (userAuth) => {
+      if (userAuth) {
         dispatch(login({
-          uid: user.uid,
-          email: user.email
+          uid: userAuth.uid,
+          email: userAuth.email
         }))
       } else {
-        dispatch(logout)
+        dispatch(logout())
       }
     });
 
     return unsucscribe
 
-  }, [])
+  }, [dispatch])
 
 
   return (
