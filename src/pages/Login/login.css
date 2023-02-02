@@ -31,8 +31,7 @@
     z-index: 1;
     height: 100vh;
     background: rgba(0, 0, 0, 0.5);
-    background-image: linear-gradient(
-            to top,
+    background-image: linear-gradient(to top,
             rgba(0, 0, 0, 0.9) 0,
             rgba(0, 0, 0, 0) 60%,
             rgba(0, 0, 0, 0.9) 100%,
@@ -51,7 +50,47 @@
     text-align: center;
 }
 
-.login__body > h1 {
+.login__body>h1 {
     font-size: 3.4rem;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+}
+
+.login__body>h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.login__body>h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.login__input>form>input {
+    padding: 9px;
+    outline-width: 0;
+    height: 30px;
+    width: 30%;
+    border: none;
+    max-width: 600px;
+}
+
+.login__getStarted {
+    padding: 17px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #e50914;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.login__input {
+    margin: 20px;
+}
+
+.login__input>form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
