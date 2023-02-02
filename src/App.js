@@ -5,19 +5,25 @@ import Login from './pages/Login/Login';
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from './server/firebase';
 import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { login, logout, selectUser } from './features/userSlice';
 
 function App() {
 
-  const user = null
+  const user = useSelector(selectUser)
+  const dispatch = useDispatch()
+  // const uid = user.uid;
 
   useEffect(() => {
     const unsucscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        // const uid = user.uid;
+        dispatch(login({
+          uid: user.uid,
+          email: user.email
+        }))
         console.log(user);
       } else {
-        // User is signed out
-        // ...
+        dispatch(logout)
       }
     });
 
