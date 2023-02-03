@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout, selectUser } from './features/userSlice';
 import Profile from './pages/Profile/Profile';
+import MovieDetails from './pages/MovieDetails/MovieDetails';
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
         ) : (
           <Routes>
             <Route exact path='/' element={<Hero />} />
+            <Route exact path='/:id' element={<MovieDetails />} />
             <Route exact path='/profile' element={<Profile />} />
           </Routes>
         )}

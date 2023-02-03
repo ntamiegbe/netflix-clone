@@ -15,11 +15,11 @@ const Profile = () => {
             <div className="profile__body">
                 <h1>Edit Profile</h1>
                 <div className="profile__info">
-                    <img src={Logo} alt="Logo" />
+                    <img src={Logo} alt="Logo" className='profile__image' />
                     <div className="profile__details">
                         <h1>{user.email}</h1>
                         <div className="profile__plans">
-
+                            <h3>Subscription Plans</h3>
                             <button onClick={() => signOut(auth)} className='profile__button'>Logout</button>
                         </div>
                     </div>
