@@ -1,4 +1,11 @@
 .movieDetails {
     height: 100vh;
     color: white;
+    max-width: 800px;
+    padding: 0 2.5rem;
+    padding-top: 8%;
+}
+
+.movieDetails__image {
+    height: 150px;
 }
