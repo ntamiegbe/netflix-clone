@@ -22,7 +22,6 @@ const MovieDetails = () => {
             setMovie(request.data)
             setGenres(request.data.genres)
             console.log(request.data);
-            // console.log(genres);
             return request
         }
         fetchData()
@@ -30,14 +29,13 @@ const MovieDetails = () => {
 
 
     return (
-        <>
+        <div className="movieDetails">
             <Navbar />
-            <div className="movieDetails">
-                <h1>{movies.title}</h1>
-                <h3>{movies.tagline}</h3>
-                <p>{movies.overview}</p>
-                <img src={`${baseImageUrl}${movies.backdrop_path || movies.poster_path}`} alt="Movie Logo" className='movieDetails__image' />
-                <p>
+            <div className="movieDetails__body">
+                <h1 className='movieDetails__title'>{movies?.name || movies?.title || movies?.original_name}</h1>
+                <h3 className='movieDetails__tagline'>{movies.tagline}</h3>
+                <p className='movieDetails__overview'>{movies.overview}</p>
+                <p className='movieDetails__genres'>Genre: {''}
                     {genres.map((genre, index) => (
                         <span key={genre.id}>
                             {genre.name}
@@ -45,8 +43,9 @@ const MovieDetails = () => {
                         </span>
                     ))}
                 </p>
+                <img src={`${baseImageUrl}${movies.backdrop_path || movies.poster_path}`} alt="Movie Logo" className='movieDetails__image' />
             </div>
-        </>
+        </div>
     )
 }
 
