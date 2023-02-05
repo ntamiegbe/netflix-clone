@@ -1,5 +1,5 @@
 .profile {
-    height: 100vh;
+    height: 100%;
     color: white;
 }
 
@@ -13,7 +13,7 @@
     max-width: 800px;
 }
 
-.profile__body > h1 {
+.profile__body>h1 {
     font-size: 2.5rem;
     font-weight: 400;
     margin-bottom: 20px;
@@ -33,7 +33,7 @@
     flex: 1;
 }
 
-.profile__details > h1 {
+.profile__details>h1 {
     background-color: gray;
     padding: 15px;
     font-size: 1rem;
@@ -52,4 +52,3 @@
     border: none;
     cursor: pointer;
 }
-
