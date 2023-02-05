@@ -60,7 +60,7 @@
     margin: 1rem;
 }
 
-.profile__plan > button {
+.profile__plan>button {
     background-color: #e50914;
     color: white;
     cursor: pointer;
@@ -74,9 +74,22 @@
 
 
 @media only screen and (max-width: 600px) {
+    .profile__body {
+        width: 90%;
+    }
+
     .profile__body>h1 {
         font-size: 1.5rem;
         font-weight: 400;
         margin-bottom: 20px;
+    }
+
+    .profile__info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile__info > img {
+        display: none;
     }
 }
