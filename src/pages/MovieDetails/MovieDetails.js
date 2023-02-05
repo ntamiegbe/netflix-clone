@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Navbar from '../../components/Navbar/Navbar'
 import SimilarMovies from '../../components/SimilarMovies/SimilarMovies'
+import Row from '../../components/Rows/Row'
 
 const MovieDetails = () => {
 
@@ -36,8 +37,7 @@ const MovieDetails = () => {
                 <h1 className='movieDetails__title'>{movies?.name || movies?.title || movies?.original_name}</h1>
                 <h3 className='movieDetails__tagline'>{movies.tagline}</h3>
                 <p className='movieDetails__overview'>{movies.overview}</p>
-                <img src={`${baseImageUrl}${movies.backdrop_path || movies.poster_path}`} alt="Movie Logo" className='movieDetails__image' />
-                <p className='movieDetails__genres'>Genre: {''}
+                <p className='movieDetails__genres'>
                     {genres.map((genre, index) => (
                         <span key={genre.id}>
                             {genre.name}
@@ -45,6 +45,7 @@ const MovieDetails = () => {
                         </span>
                     ))}
                 </p>
+                <img src={`${baseImageUrl}${movies.backdrop_path || movies.poster_path}`} alt="Movie Logo" className='movieDetails__image' />
             </div>
             <SimilarMovies />
         </div>

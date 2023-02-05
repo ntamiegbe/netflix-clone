@@ -10,6 +10,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 1rem;
 }
 
 .movieDetails__title {
@@ -36,7 +37,7 @@
 }
 
 .movieDetails__genres {
-    padding-bottom: 1rem;
+    margin: 2.5rem 0 1rem 0;
 }
 
 .movieDetails__image {
@@ -67,16 +68,16 @@
         width: 20rem;
     }
 
-    .movieDetails__genres {
+    /* .movieDetails__genres {
         margin-top: 1.2rem;
-    }
+    } */
 
     .movieDetails__image {
         margin-top: 1rem;
     }
 
     .movieDetails {
-        height: 100%;
+        min-height: 100vh;
         color: white;
         padding: 2rem;
     }

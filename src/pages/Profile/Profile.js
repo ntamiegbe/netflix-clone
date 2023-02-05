@@ -20,6 +20,18 @@ const Profile = () => {
                         <h1>{user.email}</h1>
                         <div className="profile__plans">
                             <h3>Subscription Plans</h3>
+                            <div className="profile__plan">
+                                <h4>Premium Plan<br />5,600</h4>
+                                <button>Subscribe</button>
+                            </div>
+                            <div className="profile__plan">
+                                <h4>Standard Plan<br />5,600</h4>
+                                <button>Subscribe</button>
+                            </div>
+                            <div className="profile__plan">
+                                <h4>Basic Plan<br />5,600</h4>
+                                <button>Subscribe</button>
+                            </div>
                             <button onClick={() => signOut(auth)} className='profile__button'>Logout</button>
                         </div>
                     </div>
