@@ -6,11 +6,11 @@ Users can view movie details including the movie overview, release date, rating,
 Users can see similar movies to the one they are viewing.
 
 Technologies: 
-React
-Vanilla CSS
-Axios
-TMDB API
-Firebase
+React,
+Vanilla CSS,
+Axios,
+TMDB API,
+Firebase,
 
 Getting Started
 To get started with this app, follow these steps:
