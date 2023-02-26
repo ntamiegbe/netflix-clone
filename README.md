@@ -15,9 +15,15 @@ Firebase
 Getting Started
 To get started with this app, follow these steps:
 
-Clone the repository: git clone https://github.com/ntamiegbe/netflix-clone.git
-Install dependencies: npm install
-Create a TMDB API key by following the instructions here.
-Create a Firebase project and configure Firebase authentication by following the instructions here.
-Create a .env file in the root directory of the project and add your API key and Firebase configuration
-Start the app: npm start
+<ol>
+<li>Clone the repository: git clone https://github.com/ntamiegbe/netflix-clone.git</li>
+<li>Install dependencies: npm install</li>
+<li>Create a TMDB API key by following the instructions here https://developers.themoviedb.org/3/getting-started/introduction</li>
+<li>Create a .env file in the root directory of the project and add your API key and Firebase configuration</li>
+<li>Start the app: npm start</li>
+</ol>
+
+
+
+
+
