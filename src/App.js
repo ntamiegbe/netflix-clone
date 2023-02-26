@@ -12,37 +12,35 @@ import MovieDetails from './pages/MovieDetails/MovieDetails';
 
 function App() {
 
-  const user = useSelector(selectUser)
-  const dispatch = useDispatch()
+  // const user = useSelector(selectUser)
+  // const dispatch = useDispatch()
 
-  useEffect(() => {
-    const unsucscribe = onAuthStateChanged(auth, (userAuth) => {
-      if (userAuth) {
-        dispatch(login({
-          uid: userAuth.uid,
-          email: userAuth.email
-        }))
-      } else {
-        dispatch(logout())
-      }
-    });
+  // useEffect(() => {
+  //   const unsucscribe = onAuthStateChanged(auth, (userAuth) => {
+  //     if (userAuth) {
+  //       dispatch(login({
+  //         uid: userAuth.uid,
+  //         email: userAuth.email
+  //       }))
+  //     } else {
+  //       dispatch(logout())
+  //     }
+  //   });
 
-    return unsucscribe
+  //   return unsucscribe
 
-  }, [dispatch])
+  // }, [dispatch])
 
 
   return (
     <div className="app">
       <Router>
-        {!user ? (
-          <Login />
-        ) : (
-          <Routes>
-            <Route exact path='/' element={<Hero />} />
-            <Route exact path='/:id' element={<MovieDetails />} />
-            <Route exact path='/profile' element={<Profile />} />
-          </Routes>
+        <Routes>
+          <Route exact path='/' element={<Login />} />
+          <Route exact path='/home' element={<Hero />} />
+          <Route exact path='/:id' element={<MovieDetails />} />
+          <Route exact path='/profile' element={<Profile />} />
+        </Routes>
         )}
       </Router>
     </div >

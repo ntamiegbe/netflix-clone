@@ -68,9 +68,9 @@
         width: 20rem;
     }
 
-    /* .movieDetails__genres {
-        margin-top: 1.2rem;
-    } */
+    .movieDetails__genres {
+        margin: 4rem 0 2rem 0;
+    }
 
     .movieDetails__image {
         margin-top: 1rem;

@@ -1,22 +1,22 @@
-import { useState } from 'react'
+import { Navigate, useNavigate } from 'react-router-dom'
 import './login.css'
-import SignUp from '../SignUp/SignUp'
 
 const Login = () => {
 
-  const [signUp, setSignUp] = useState(false)
+  const navigate = useNavigate()
+
+  const navigateToHome = () => {
+    navigate('/home')
+  }
 
   return (
     <div className='login'>
       <div className="login__background">
         <img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" alt="" className='login__logo' />
-        <button className='login__button' onClick={() => setSignUp(true)}>Sign In</button>
+        <button className='login__button' onClick={navigateToHome()}>Sign In</button>
         <div className="login__gradient" />
       </div>
       <div className="login__body">
-        {signUp ? (
-          <SignUp />
-        ) : (
           <>
             <h1>Unlimited films, TV programmes and more</h1>
             <h2>Watch anywhere. Cancel at any time.</h2>
@@ -25,11 +25,10 @@ const Login = () => {
             <div className="login__input">
               <form>
                 <input type="email" placeholder='Email address' />
-                <button className='login__getStarted' onClick={() => setSignUp(true)}>Get Started</button>
+                <button className='login__getStarted' onClick={navigateToHome()}>Get Started</button>
               </form>
             </div>
           </>
-        )}
       </div>
     </div>
   )
