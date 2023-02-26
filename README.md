@@ -5,7 +5,7 @@ Users can browse movies based on category such as popular movies, top rated movi
 Users can view movie details including the movie overview, release date, rating, runtime, genres, and cast.
 Users can see similar movies to the one they are viewing.
 
-Technologies
+Technologies: 
 React
 Vanilla CSS
 Axios
